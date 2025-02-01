@@ -294,16 +294,9 @@ button:focus {
   transform-origin: left;
 }
 
-@media only screen and (min-width: 800px) {
-  :root {
-    --card-width: 250px;
-    --card-height: 400px;
-  }
-}
-/* Default styles (for mobile-first approach) */
 :root {
-  --card-width: 150px; /* Phone screen */
-  --card-height: 250px;
+  --card-width: 100%; /* Full width for mobile */
+  --card-height: auto; /* Adjust height dynamically */
 }
 
 /* For tablets and small laptops */
@@ -320,4 +313,16 @@ button:focus {
     --card-width: 250px;
     --card-height: 400px;
   }
+}
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  max-width: 150px; /* Restrict max size for mobile */
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
 }
