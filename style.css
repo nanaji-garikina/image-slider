@@ -300,3 +300,24 @@ button:focus {
     --card-height: 400px;
   }
 }
+/* Default styles (for mobile-first approach) */
+:root {
+  --card-width: 150px; /* Phone screen */
+  --card-height: 250px;
+}
+
+/* For tablets and small laptops */
+@media only screen and (min-width: 600px) {
+  :root {
+    --card-width: 200px;
+    --card-height: 350px;
+  }
+}
+
+/* For larger laptop and desktop screens */
+@media only screen and (min-width: 1024px) {
+  :root {
+    --card-width: 250px;
+    --card-height: 400px;
+  }
+}
